@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Document</title>
+
+
+    <style>
+            body {
+            font-family: Verdana, sans-serif;
+            line-height: 1.5;
+            font-size: 15px;
+            margin: 0;
+        }
+        
+        .Menu {
+            background-color: white;
+            text-decoration: none;
+            letter-spacing: 4px;
+            position: absolute;
+            height: 40px;
+            width: 100%;
+            padding: 7px;
+            z-index: 1;
+        }
+        
+        ul {
+            list-style: none;
+            /*            викорислала флекс*/
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        li {
+            color: darkslategray;
+            display: inline-block;
+        }
+        
+        .all {
+            background-color: darkslategray;
+            /*            трансформація блоку*/
+            transform: rotate(5deg) scale(1) skew(1deg) translate(10px);
+            color: aliceblue;
+            font-size: 20px;
+            padding: 5px;
+            display: none;
+        }
+        
+        .all:hover {
+            background-color: darkgray;
+        }
+        
+        li:hover {
+            background-color: darkgray;
+        }
+        
+        #main_im {
+            margin-top: 40px;
+            width: 100%;
+        }
+        
+        .nameOn {
+            text-align: center;
+            position: absolute;
+            color: white;
+            background-color: black;
+            top: 40%;
+            left: 50%;
+        }
+        
+        #WA {
+            padding: 10px;
+            color: black;
+            background-color: white;
+        }
+        
+        .name {
+            margin: 30px 20px 15px 30px;
+        }
+        
+        .house {
+            /*             прозорість*/
+            opacity: 0.7;
+            color: white;
+            background-color: black;
+            position: absolute;
+            padding: 8px;
+            left: 20px;
+            top: 0;
+        }
+        
+        .projects {
+            width: 23%;
+            padding: 15px 3px 8px 20px;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .projects img {
+            width: 99%;
+            /*            тінь зображення*/
+            box-shadow: 6px 10px 18px #000000;
+        }
+        
+        .Inf {
+            margin: 20px;
+        }
+        
+/*        шрифт тексту */
+        @font-face {
+            font-family: 'GoodFootRegular';
+            src: url('goodfoot.eot');
+            src: local('Good Foot'), local('GoodFoot'), url('goodfoot.woff') format('woff'), url('goodfoot.ttf') format('truetype');
+        }
+        
+        .help {
+            font: 20px bold normal GoodFootRegular;
+            margin: 30px;
+            padding: 30px;
+            display: inline-block;
+            width: 90%;
+            /*            рамка */
+            border: dashed 3px #0c1c0b;
+            width: 100%;
+        }
+        .txt{
+            font-size: 10px;
+            margin-right: 60%;
+            
+        }
+        
+        h3 {
+            margin-left: 15px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            /*            текст під кутом */
+            transform: rotate(3deg);
+        }
+        
+        form [type=text] {
+            margin: 15px;
+            padding: 8px;
+            display: block;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            width: 100%;
+            height: 40px;
+        }
+        .block{
+            display: inline-block;
+        }
+        .pruxov{
+            display: none;
+        }
+        
+        a button {
+            margin: 15px;
+            padding: 8px;
+            background-color: brown;
+            color: white;
+        }
+        
+        button {
+            width: 99%;
+            /*            градієнт для кнопок */
+            background: -webkit-gradient(linear, 0 0, 40% 60%, from(#5C8964), to(#072A0D));
+            padding: 3px 7px;
+            color: aliceblue;
+            border-radius: 15px;
+        }
+        /*        анімація */
+        
+        h1 {
+            animation: cssAnimation 5s 20 ease;
+        }
+     
+        
+        @-webkit-keyframes cssAnimation {
+            from {
+                -webkit-transform: rotate(6deg) scale(0.997) skew(-16deg) translate(-32px);
+            }
+            to {
+                -webkit-transform: rotate(0deg) scale(1.12) skew(1deg) translate(-15px);
+            }
+    
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul class="Menu">
+            <li id="home">
+                <a href="#num">Основна інформація</a>
+                <ul>
+                    <li class="all home">наші послуги</li>
+                </ul>
+            </li>
+            <li id="cont">
+                <a href="#projects">Модні кольори</a>
+                <ul>
+                    <li class="all cont">1</li>
+                    <li class="all cont">2</li>
+                    <li class="all cont">3</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#contact">Авторизуватись</a></li>
+            <li id="as">
+                <a href="#help">Допомога</a>
+                <ul>
+                    <li class="all as">tel</li>
+                    <li class="all as">address</li>
+                    <li class="all as">E-mail</li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+    <div>
+        <img id="main_im" src="41.jpg" alt="">
+        <a name="home"></a>
+        <h1 class="nameOn"><b id="WA"> SAY YES </b><span class="">WEDDING AGENCY</span></h1>
+    </div>
+
+
+    <div>
+
+        <h2 class="name"><a name="num"> Основна інформація</a></h2>
+        <hr>
+        <p class="Inf"> Весілля-це одне з найяскравіших свят в житті наречених!!!Ми втілимо ваші мрії в реальність.А також організуємо ваше весілля до кожної дрібнички. Весілля повинно бути ідеальним👰.А ідеальне весілля-це продуманість кожної деталі☝,чітко розуміючи того,чого хочеться💭,правильний підбір і надійність виконуючих💒💒.І звісно ж ваше весілля,повинно бути саме''вашим'',для вас двох💑,ми створимо вашу історію кохання і піднесемо її в найромантичнішому світі!!! Від класичного до тематичного весілля!!! </p>
+
+        <div class="projects">
+            <img src="42.jpg" alt="">
+            <h3>Candy bar</h3>
+            <p class="">Ви будете приємно здивовані різноманітністю та смаком десертів. В новому весільному сезоні на вас чекає багато новинок та нових декорацій</p>
+            <button>Замовити</button>
+        </div>
+
+        <div class="projects">
+            <img src="44.jpg" alt="">
+            <h3>Виїзна церемонія</h3>
+            <p class="">Виїзна церемонія - ключовий, найромантичніший момент на весіллі.Ми приділяємо весільній церимоніі особливої уваги!</p>
+            <button>Замовити</button>
+        </div>
+
+        <div class="projects">
+            <img src="46.jpg" alt="">
+            <h3>Банер(фотозона)</h3>
+            <p class="">Якщо ви думаєте, що банер на весіллі – це дрібничка, то глибоко помиляєтеся. Адже це “вираження почуттів” молодят одне до одного.</p>
+            <button>Замовити</button>
+        </div>
+
+        <div class="projects">
+            <img src="43.jpg" alt="">
+            <h3>Кольоровий дим</h3>
+            <p class="">Димоутворення до 60 секунд. Дим не забарвлює одяг. Безпечні! Можна тримати в руках. Завжди в наявності 6 кольорів.</p>
+            <button>Замовити</button>
+        </div>
+        <div class="projects">
+            <img src="45.jpg" alt="">
+            <h3>Фруктовий стіл</h3>
+            <button>Замовити</button>
+        </div>
+
+        <div class="projects">
+            <img src="47.jpg" alt="">
+            <h3>Флористика</h3>
+            <button>Замовити</button>
+        </div>
+
+        <div class="projects">
+            <img src="48.jpg" alt="">
+            <h3>Оформлення залу</h3>
+            <button>Замовити</button>
+        </div>
+
+        <div class="projects">
+            <img src="49.jpg" alt="">
+            <h3>Весільна поліграфія</h3>
+            <button>Замовити</button>
+        </div>
+        <div>
+            <a name="projects"></a>
+            <h2 class="name">Кольори для весілля</h2>
+
+            <hr>
+
+            <div class="projects">
+                <img src="2.jpg" alt="">
+                <p class="house">Зелений</p>
+            </div>
+
+            <div class="projects">
+                <img src="3.jpg" alt="">
+                <p class="house">Бузковий</p>
+            </div>
+            <div class="projects">
+                <img src="4.jpg" alt="">
+                <p class="house">Чкрвоний</p>
+            </div>
+
+            <div class="projects">
+                <img src="5.jpg" alt="">
+                <p class="house">Кремовий або персиковий</p>
+            </div>
+            <div class="projects">
+                <img src="6.jpg" alt="">
+                <p class="house">Бірюзовий</p>
+            </div>
+
+            <div class="projects">
+                <img src="71.jpg" alt="">
+                <p class="house">Марсала</p>
+            </div>
+
+            <div class="projects">
+                <img src="8.jpg" alt="">
+                <p class="house">Синій</p>
+            </div>
+
+            <div class="projects">
+                <img src="9.jpg" alt="">
+                <p class="house">Жовтий</p>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <a name="contact">
+            <h2 class="name">Contact</h2>
+            <hr>
+            <form name="forma1">
+                <input type="text" name="text1" placeholder="Name" required name="Name">
+                <input type="text" name="text2" placeholder="Email" required name="Email">
+                <input type="text" name="text4" placeholder="Comment" required name="Comment">
+                <button type="submit">SEND MESSAGE</button>
+
+            </form>
+        </a>
+    </div>
+    <a name="help">
+        <h2 class="name">Допомога</h2>
+        <hr>
+        <div class="help">
+            <p id="tel" class="block">Наш телефон____(показати)___</p>
+            <p id="tel-" class="block">(приховати)</p>
+            <p class="tel pruxov">0685947588</p>
+            <p id="add" class="block">___Наша електронна адреса___(показати)___</p>
+            <p id="add-" class="block">(приховати)</p>
+            <p class="add pruxov">YES.mail.ru</p>
+            <p id="htt">ТЕПЕР ВСЕ МОЖНА ЗРОБИТИ ЧЕРЕЗ САЙТ__(натисніть щоб дізнатись)</p>
+            <p class="txt">___Як організувати власне весілля? Справ безліч. Навіть не знаєш, із чого розпочати. Дотепер в Україні не існувало подібного додатку.<a href="http://wedmarket.com.ua/"> WedMarket</a> - це соціальна мережа для молодят та спеціалістів весільної сфери. Такі є у Європі та Росії, користуються неабиякою популярністю. Адже це зручно - зареєструватися і користуватися весільним органайзером он-лайн. Власне весілля можна організувати лише на одному сайті.</p>
+        </div>
+
+    </a>
+
+ <script>
+        $ ('#tel').click(function() {
+            $('.tel').slideDown(3000);
+        })
+        $('#tel-').click(function() {
+            $('.tel').slideUp(3000);
+        })
+          $('#add').click(function() {
+            $('.add').fadeIn(3000);
+        })
+        $('#add-').click(function() {
+            $('.add').fadeOut(3000);
+        })
+         $('#htt').click(function() {
+            $('.txt').animate({
+            fontSize: '20px',
+            marginRight: '250px'
+        } );
+        })
+       
+    </script>
+
+
+
+    <script>
+        $('#home').hover(function() {
+            $('.home').slideToggle(1000);
+        })
+        $('#cont').hover(function() {
+            $('.cont').slideToggle(1000);
+        })
+        $('#as').hover(function() {
+            $('.as').slideToggle(1000);
+        })
+    </script>
+</body>
+
+</html>
